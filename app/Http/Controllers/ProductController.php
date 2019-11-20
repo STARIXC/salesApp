@@ -19,13 +19,8 @@ public function create()
 }
 public function store(Request $request)
 {
-    $product= new Product();
-    $product ->productCode=$request->productCode;
-    $product ->productName=$request->productName;
-    $product ->reorderPoint=$request->reorderPoint;
-    $product ->idealStock=$request->idealStock;
-    $product ->unitPrice=$request->unitPrice;
-    $product->save();
+    $input =$request->all();
+    $product=Product::create($input);
     return redirect('/products');
 }
 }

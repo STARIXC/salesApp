@@ -10,9 +10,6 @@ Products
           <div class="card">
             <div class="card-header">
               <h4 class="card-title"> Products Table</h4>
-              <div class="pull-right">
-               <button class="btn-info"> <a href="/create"  >Add New Product</a></button>
-              </div>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -29,14 +26,10 @@ Products
                     </th>
                     <th>
                             Ideal Stock
-                    </th>
-                    <th class="">
+                        </th>
+                    <th class="text-right">
                       Unit Price
                     </th>
-                    <th>
-                        Action
-                        </th>
-
                   </thead>
                   <tbody>
                         @foreach ($products as $item)
@@ -53,14 +46,8 @@ Products
                                 <td>
                                         {{$item ->idealStock}}
                                 </td>
-                                <td class="">
+                                <td class="text-right">
                                         {{$item ->unitPrice}}
-                                </td>
-                                <td>
-                                      <div class="btn-group" role="group" aria-label="Button group">
-                                            <button class="btn btn-success btn-md m-1">Edit</button>
-                                            <button class="btn btn-danger btn-md m-1 ">Delete</button>
-                                      </div>
                                 </td>
                               </tr>
 
